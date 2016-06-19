@@ -1,0 +1,39 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?> -->
+
+<!-- <beans xmlns="http://www.springframework.org/schema/beans" -->
+<!-- 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" -->
+<!-- 	xsi:schemaLocation="http://www.springframework.org/schema/beans -->
+<!--     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"> -->
+
+<!-- <!-- 	 <bean id="fontCreator" class="com.jamesanton.dashboard.instrument_cluster.ui.util.FontCreator" />  --> -->
+
+<!-- 	<bean id="instrumentCluster" -->
+<!-- 		class="com.jamesanton.dashboard.instrument_cluster.ui.InstrumentCluster" -->
+<!-- 		factory-method="getInstance" lazy-init="false" /> -->
+
+<!-- 	<bean id="serialEventListener" -->
+<!-- 		class="com.jamesanton.dashboard.instrument_cluster.SerialEventListener" /> -->
+
+<!-- 	<bean id="serialPortListener" -->
+<!-- 		class="com.jamesanton.dashboard.instrument_cluster.SerialPortListener"> -->
+<!-- 		<constructor-arg value="/dev/ttyS80" /> -->
+<!-- 		<constructor-arg ref="serialEventListener" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="serialPortListenerThread" class="java.lang.Thread"> -->
+<!-- 		<constructor-arg ref="serialPortListener" /> -->
+<!-- 	</bean> -->
+
+<!-- 	<bean id="instrumentClusterUpdater" -->
+<!-- 		class="com.jamesanton.dashboard.instrument_cluster.InstrumentClusterUpdater" /> -->
+
+<!-- 	<bean id="instrumentClusterUpdaterThread" class="java.lang.Thread"> -->
+<!-- 		<constructor-arg ref="instrumentClusterUpdater" /> -->
+<!-- 	</bean> -->
+<!-- 	<bean id="dummyDataListener" -->
+<!-- 		class="com.jamesanton.dashboard.instrument_cluster.DummyDataListener" /> -->
+<!-- 	<bean id="dummyDataListenerThread" class="java.lang.Thread"> -->
+<!-- 		<constructor-arg ref="dummyDataListener" /> -->
+<!-- 	</bean> -->
+
+<!-- </beans> -->
