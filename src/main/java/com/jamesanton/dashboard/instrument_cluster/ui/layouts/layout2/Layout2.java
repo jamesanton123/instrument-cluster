@@ -1,4 +1,4 @@
-package com.jamesanton.dashboard.instrument_cluster.ui.layouts;
+package com.jamesanton.dashboard.instrument_cluster.ui.layouts.layout2;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -7,6 +7,7 @@ import java.awt.Point;
 import javax.swing.JLayeredPane;
 
 import com.jamesanton.dashboard.instrument_cluster.ui.InstrumentCluster;
+import com.jamesanton.dashboard.instrument_cluster.ui.layouts.InstrumentClusterLayout;
 import com.jamesanton.dashboard.instrument_cluster.ui.layouts.layout2.Battery;
 import com.jamesanton.dashboard.instrument_cluster.ui.layouts.layout2.Brights;
 import com.jamesanton.dashboard.instrument_cluster.ui.layouts.layout2.CheckEngineLight;
@@ -19,16 +20,15 @@ import com.jamesanton.dashboard.instrument_cluster.ui.layouts.layout2.RightTurnS
 import com.jamesanton.dashboard.instrument_cluster.ui.layouts.layout2.SpeedometerNeedle;
 import com.jamesanton.dashboard.instrument_cluster.ui.layouts.layout2.VoltageL2;
 
-public class Layout2 {
+public class Layout2 implements InstrumentClusterLayout{
 	private static final Dimension SIZE = InstrumentCluster.SIZE;
 	public static final Point LOCATION_ICONS = new Point(540, 300);
 	private static final Dimension LEFT_PANE_SIZE = new Dimension(Math.min(SIZE.height, SIZE.width), Math.min(SIZE.height, SIZE.width));
-
 	
 	/**
 	 * This is just setting defaults for our components
 	 */
-	public static void initializeAndSetDefaults() {		
+	public void initializeAndSetDefaults() {		
 		SpeedometerNeedle.getInstance().setValue(0);
 		MphDigitalTextL2.getInstance().setValue(0);
 		VoltageL2.getInstance().setValue(0);
@@ -46,7 +46,7 @@ public class Layout2 {
 	 * This layered pane has most of our components on it.
 	 * @return
 	 */
-	public static JLayeredPane getControlPanel() {
+	public JLayeredPane getControlPanel() {
 		JLayeredPane layeredPane = new JLayeredPane();		
 		// Add components to control panel
 		layeredPane.add(Battery.getInstance().getPanel(), new Integer(1));
@@ -71,7 +71,7 @@ public class Layout2 {
 	}
 	
 	
-	private static void addNumbersForMph(JLayeredPane layeredPane, int startingJLayeredPaneIndex){
+	private void addNumbersForMph(JLayeredPane layeredPane, int startingJLayeredPaneIndex){
 		layeredPane.add(new MphNumber("000", 0, LEFT_PANE_SIZE.height - MphNumber.MPH_NUMBER_SIZE.height), new Integer(startingJLayeredPaneIndex));
 		layeredPane.add(new MphNumber("020", 0, LEFT_PANE_SIZE.height / 2 - MphNumber.MPH_NUMBER_SIZE.height / 2), new Integer(startingJLayeredPaneIndex + 1));
 		layeredPane.add(new MphNumber("040", 0, 0), new Integer(startingJLayeredPaneIndex + 2));

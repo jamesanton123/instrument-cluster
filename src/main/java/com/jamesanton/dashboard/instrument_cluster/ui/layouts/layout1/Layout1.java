@@ -1,4 +1,4 @@
-package com.jamesanton.dashboard.instrument_cluster.ui.layouts;
+package com.jamesanton.dashboard.instrument_cluster.ui.layouts.layout1;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -6,29 +6,13 @@ import java.awt.Dimension;
 import javax.swing.JLayeredPane;
 
 import com.jamesanton.dashboard.instrument_cluster.ui.InstrumentCluster;
-import com.jamesanton.dashboard.instrument_cluster.ui.layouts.layout1.Analog0;
-import com.jamesanton.dashboard.instrument_cluster.ui.layouts.layout1.Analog1;
-import com.jamesanton.dashboard.instrument_cluster.ui.layouts.layout1.Analog2;
-import com.jamesanton.dashboard.instrument_cluster.ui.layouts.layout1.Analog3;
-import com.jamesanton.dashboard.instrument_cluster.ui.layouts.layout1.Analog4;
-import com.jamesanton.dashboard.instrument_cluster.ui.layouts.layout1.Analog5;
-import com.jamesanton.dashboard.instrument_cluster.ui.layouts.layout1.Brights;
-import com.jamesanton.dashboard.instrument_cluster.ui.layouts.layout1.CheckEngineLight;
-import com.jamesanton.dashboard.instrument_cluster.ui.layouts.layout1.DigitalPins;
-import com.jamesanton.dashboard.instrument_cluster.ui.layouts.layout1.GasPanel;
-import com.jamesanton.dashboard.instrument_cluster.ui.layouts.layout1.LeftTurnSignal;
-import com.jamesanton.dashboard.instrument_cluster.ui.layouts.layout1.MphDigitalText;
-import com.jamesanton.dashboard.instrument_cluster.ui.layouts.layout1.MphNumber;
-import com.jamesanton.dashboard.instrument_cluster.ui.layouts.layout1.RightTurnSignal;
-import com.jamesanton.dashboard.instrument_cluster.ui.layouts.layout1.RpmMeter;
-import com.jamesanton.dashboard.instrument_cluster.ui.layouts.layout1.SpeedometerNeedle;
-import com.jamesanton.dashboard.instrument_cluster.ui.layouts.layout1.VoltPanel;
+import com.jamesanton.dashboard.instrument_cluster.ui.layouts.InstrumentClusterLayout;
 
-public class Layout1 {
+public class Layout1 implements InstrumentClusterLayout{
 	private static final Dimension SIZE = InstrumentCluster.SIZE;
 	private static final Dimension LEFT_PANE_SIZE = new Dimension(Math.min(SIZE.height, SIZE.width), Math.min(SIZE.height, SIZE.width));
 	
-	public static void initializeAndSetDefaults() {
+	public void initializeAndSetDefaults() {
 		RpmMeter.getInstance().setValue(0);
 		MphDigitalText.getInstance().setValue(0);
 		SpeedometerNeedle.getInstance().setValue(0);	
@@ -47,7 +31,7 @@ public class Layout1 {
 		VoltPanel.getInstance().setValue(0);
 	}
 	
-	public static JLayeredPane getControlPanel() {
+	public JLayeredPane getControlPanel() {
 		JLayeredPane layeredPane = new JLayeredPane();		
 		// Add components to control panel
 		layeredPane.add(RpmMeter.getInstance().getPanel(), new Integer(1));
@@ -79,7 +63,7 @@ public class Layout1 {
 		return layeredPane;
 	}
 	
-	private static void addNumbersForMph(JLayeredPane layeredPane, int startingJLayeredPaneIndex){
+	private void addNumbersForMph(JLayeredPane layeredPane, int startingJLayeredPaneIndex){
 		layeredPane.add(new MphNumber("000", 0, LEFT_PANE_SIZE.height - MphNumber.MPH_NUMBER_SIZE.height), new Integer(startingJLayeredPaneIndex));
 		layeredPane.add(new MphNumber("020", 0, LEFT_PANE_SIZE.height / 2 - MphNumber.MPH_NUMBER_SIZE.height / 2), new Integer(startingJLayeredPaneIndex + 1));
 		layeredPane.add(new MphNumber("040", 0, 0), new Integer(startingJLayeredPaneIndex + 2));

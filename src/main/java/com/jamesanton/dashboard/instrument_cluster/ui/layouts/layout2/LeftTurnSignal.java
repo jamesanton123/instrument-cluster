@@ -9,8 +9,6 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
-import com.jamesanton.dashboard.instrument_cluster.ui.layouts.Layout2;
-
 public class LeftTurnSignal implements GraphicalJPanel {
 
 	protected static final Dimension SIZE = new Dimension(42, 42);

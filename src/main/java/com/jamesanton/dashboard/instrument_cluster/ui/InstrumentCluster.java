@@ -13,15 +13,15 @@ import java.awt.image.BufferedImage;
 
 import javax.swing.JFrame;
 
-import com.jamesanton.dashboard.instrument_cluster.ui.layouts.Layout2;
+import com.jamesanton.dashboard.instrument_cluster.ui.layouts.InstrumentClusterLayout;
 public class InstrumentCluster extends JFrame implements Runnable {
-
 	private static final long serialVersionUID = 1L;
 	public static InstrumentCluster newContentPane = null;
 	public static Color background = new Color(0, 80, 0);
 	public static final Dimension SIZE = new Dimension(660, 480);
 	public static final Dimension LEFT_PANE_SIZE = new Dimension(Math.min(SIZE.height, SIZE.width), Math.min(SIZE.height, SIZE.width));
 	private static InstrumentCluster instance = null;
+	private InstrumentClusterLayout instrumentClusterLayout;
 	
 	public InstrumentCluster() {
 		BufferedImage cursorImg = new BufferedImage(16, 16, BufferedImage.TYPE_INT_ARGB);
@@ -29,11 +29,12 @@ public class InstrumentCluster extends JFrame implements Runnable {
 		this.getContentPane().setCursor(blankCursor);
 	}
 
-	public static InstrumentCluster getInstance() {
+	public static InstrumentCluster getInstance(InstrumentClusterLayout instrumentClusterLayout) {
 		if (instance == null) {
 			instance = new InstrumentCluster();
-			instance.add(Layout2.getControlPanel());
-			Layout2.initializeAndSetDefaults();
+			instance.setInstrumentClusterLayout(instrumentClusterLayout);
+			instance.add(instrumentClusterLayout.getControlPanel());			
+			instrumentClusterLayout.initializeAndSetDefaults();
 			instance.setVisible(true);
 		}
 		return instance;
@@ -71,5 +72,13 @@ public class InstrumentCluster extends JFrame implements Runnable {
 			this.pack();
 			this.setVisible(true);
 		}
+	}
+
+	public InstrumentClusterLayout getInstrumentClusterLayout() {
+		return instrumentClusterLayout;
+	}
+
+	public void setInstrumentClusterLayout(InstrumentClusterLayout instrumentClusterLayout) {
+		this.instrumentClusterLayout = instrumentClusterLayout;
 	}
 }

@@ -1,4 +1,10 @@
+The new simpler/faster ui
 ![Alt text](/cover.png?raw=true "New UI")
+
+The old cooler ui but slow on raspberry pi
+Layout2
+![Alt text](/old-ui.png?raw=true "New UI")
+
 
 This is the software that runs the instrument cluster in my car. There are some main physical components that this software is integrated with. The physical parts of the automobile such as the small ac generator inside a transmission, that increases electricity as the output shaft spins faster. The wires connecting to the old instrument cluster, containing signals for turn signals, warning lights, etc. The raspberry pi which does the heavy lifting and hosts the java swing application. This project is basically all the software that I used to be able to replace my stock instrument gauge cluster of my car with a lcd screen.
 

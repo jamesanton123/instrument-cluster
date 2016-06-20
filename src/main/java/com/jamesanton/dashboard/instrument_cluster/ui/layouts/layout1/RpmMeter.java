@@ -20,7 +20,7 @@ public class RpmMeter implements GraphicalJPanel{
 	private double lineXCoefficient = .07;
 	private double verticalDegree = 135;
 	public static final int maxRpm = 7000;
-	private double barWidthInDegrees = 3;
+	private double barWidthInDegrees = 1;
 	private double barSpacerInDegrees = 1;
 	private int numBars = (int) ((double) 180 / (barWidthInDegrees + barSpacerInDegrees));
 	private Color[] colorsToUse = getColorsForBars();
