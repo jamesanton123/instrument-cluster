@@ -1,8 +1,9 @@
 The new simpler/faster ui
+
 ![Alt text](/cover.png?raw=true "New UI")
 
 The old cooler ui but slow on raspberry pi
-Layout2
+
 ![Alt text](/old-ui.png?raw=true "New UI")
 
 
