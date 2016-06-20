@@ -10,7 +10,7 @@ import javax.swing.JPanel;
 import org.apache.commons.lang.StringUtils;
 
 import com.jamesanton.dashboard.instrument_cluster.ui.layouts.layout1.GraphicalJPanel;
-import com.jamesanton.dashboard.instrument_cluster.ui.util.FontCreator;
+import com.jamesanton.dashboard.instrument_cluster.util.FontCreator;
 public class MphDigitalTextL2 extends JPanel implements GraphicalJPanel{
 	
 	private static final long serialVersionUID = 1L;

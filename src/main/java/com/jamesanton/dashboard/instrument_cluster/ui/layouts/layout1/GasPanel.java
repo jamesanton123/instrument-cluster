@@ -4,13 +4,14 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.Point;
+
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import org.apache.commons.lang.StringUtils;
 
 import com.jamesanton.dashboard.instrument_cluster.ui.InstrumentCluster;
-import com.jamesanton.dashboard.instrument_cluster.ui.util.FontCreator;
+import com.jamesanton.dashboard.instrument_cluster.util.FontCreator;
 public class GasPanel extends JPanel implements GraphicalJPanel{
 	
 	private static final long serialVersionUID = 1L;

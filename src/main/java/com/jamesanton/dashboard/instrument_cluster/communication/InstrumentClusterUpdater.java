@@ -1,4 +1,4 @@
-package com.jamesanton.dashboard.instrument_cluster;
+package com.jamesanton.dashboard.instrument_cluster.communication;
 
 import org.apache.commons.lang.StringUtils;
 

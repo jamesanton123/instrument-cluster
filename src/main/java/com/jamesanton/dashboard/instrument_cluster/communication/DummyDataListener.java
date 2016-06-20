@@ -1,4 +1,4 @@
-package com.jamesanton.dashboard.instrument_cluster;
+package com.jamesanton.dashboard.instrument_cluster.communication;
 
 import org.apache.commons.lang.StringUtils;
 
@@ -11,7 +11,6 @@ import com.jamesanton.dashboard.instrument_cluster.ui.layouts.layout2.LeftTurnSi
 import com.jamesanton.dashboard.instrument_cluster.ui.layouts.layout2.MphDigitalTextL2;
 import com.jamesanton.dashboard.instrument_cluster.ui.layouts.layout2.RightTurnSignal;
 import com.jamesanton.dashboard.instrument_cluster.ui.layouts.layout2.SpeedometerNeedle;
-import com.jamesanton.dashboard.instrument_cluster.ui.layouts.layout2.VoltageL2;
 
 /**
  * This is a working listener of the rxtx port. It is responsible for listening
@@ -26,11 +25,10 @@ public class DummyDataListener implements Runnable{
 	}
 
 	public void pumpData() throws Exception {
-		StringBuilder sb = new StringBuilder();
 		while(true){
-//			testSpeed();
+			testSpeed();
 			testVoltage();
-//			testSignals();
+			testSignals();
 		}
 	}	
 	
@@ -95,7 +93,7 @@ public class DummyDataListener implements Runnable{
 		}
 	}
 	
-	public static String getTable(int i) {
+	public static String getDebuggingTable(int i) {
 		String val = StringUtils.leftPad(String.valueOf(i), 4, "0");
 		StringBuilder sb = new StringBuilder();
 		sb.append("<html>");

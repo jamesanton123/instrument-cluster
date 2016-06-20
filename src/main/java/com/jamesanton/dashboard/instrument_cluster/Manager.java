@@ -1,10 +1,12 @@
 package com.jamesanton.dashboard.instrument_cluster;
 
+import com.jamesanton.dashboard.instrument_cluster.communication.DummyDataListener;
+import com.jamesanton.dashboard.instrument_cluster.communication.InstrumentClusterUpdater;
 import com.jamesanton.dashboard.instrument_cluster.ui.InstrumentCluster;
 
 public class Manager {
-	private static boolean usingArduino = true;
-
+	private static boolean usingArduino = false;
+	
 	public static void main(String[] args) {
 		javax.swing.SwingUtilities.invokeLater(InstrumentCluster.getInstance());
 		if (usingArduino) {

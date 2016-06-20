@@ -35,7 +35,6 @@ public class InstrumentCluster extends JFrame implements Runnable {
 			instance.add(Layout2.getControlPanel());
 			Layout2.initializeAndSetDefaults();
 			instance.setVisible(true);
-			System.out.println("Finished initializing instrument cluster");
 		}
 		return instance;
 	}

@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 
 import org.apache.commons.lang.StringUtils;
 
-import com.jamesanton.dashboard.instrument_cluster.ui.util.FontCreator;
+import com.jamesanton.dashboard.instrument_cluster.util.FontCreator;
 
 public class VoltageL2 extends JPanel implements GraphicalJPanel {
 

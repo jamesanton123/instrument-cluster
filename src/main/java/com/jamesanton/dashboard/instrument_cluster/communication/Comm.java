@@ -1,4 +1,8 @@
-package com.jamesanton.dashboard.instrument_cluster;
+package com.jamesanton.dashboard.instrument_cluster.communication;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 import gnu.io.CommPort;
 import gnu.io.CommPortIdentifier;
@@ -6,10 +10,6 @@ import gnu.io.NoSuchPortException;
 import gnu.io.SerialPort;
 import gnu.io.SerialPortEvent;
 import gnu.io.SerialPortEventListener;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 
 public class Comm implements SerialPortEventListener {
 	private String portName = "/dev/ttyS80";

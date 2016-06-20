@@ -9,7 +9,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import com.jamesanton.dashboard.instrument_cluster.ui.InstrumentCluster;
-import com.jamesanton.dashboard.instrument_cluster.ui.util.FontCreator;
+import com.jamesanton.dashboard.instrument_cluster.util.FontCreator;
 public class Analog5 extends JPanel implements GraphicalJPanel{
 	
 	private static final long serialVersionUID = 1L;

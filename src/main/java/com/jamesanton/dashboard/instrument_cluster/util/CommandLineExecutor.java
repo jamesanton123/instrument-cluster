@@ -1,4 +1,4 @@
-package com.jamesanton.dashboard.instrument_cluster.ui.util;
+package com.jamesanton.dashboard.instrument_cluster.util;
 
 import java.io.IOException;
 import java.util.Date;

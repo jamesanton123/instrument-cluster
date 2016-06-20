@@ -9,7 +9,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import com.jamesanton.dashboard.instrument_cluster.ui.InstrumentCluster;
-import com.jamesanton.dashboard.instrument_cluster.ui.util.FontCreator;
+import com.jamesanton.dashboard.instrument_cluster.util.FontCreator;
 public class DigitalPins extends JPanel implements GraphicalJPanel{
 //	final static Logger LOG = Logger.getLogger(InstrumentClusterUpdater.class);
 
