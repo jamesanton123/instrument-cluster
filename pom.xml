@@ -54,12 +54,9 @@
 	</build>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.rxtx/rxtx -->
-		<dependency>
-			<groupId>org.rxtx</groupId>
-			<artifactId>rxtx</artifactId>
-			<version>2.1.7</version>
-		</dependency>
-
+		
+		<!-- I believe I was using the library called rxtx-2.1-7-bins-r2 -->
+		
 		<!-- <dependency> -->
 		<!-- <groupId>gnu.io</groupId> -->
 		<!-- <artifactId>rxtx</artifactId> -->
