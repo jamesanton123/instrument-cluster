@@ -53,8 +53,6 @@
 		</plugins>
 	</build>
 	<dependencies>
-		<!-- https://mvnrepository.com/artifact/org.rxtx/rxtx -->
-		
 		<!-- I believe I was using the library called rxtx-2.1-7-bins-r2 -->
 		
 		<!-- <dependency> -->
