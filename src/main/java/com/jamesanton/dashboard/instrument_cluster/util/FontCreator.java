@@ -14,8 +14,8 @@ public class FontCreator {
 	private static final String[] PATHS = {"font/square_sans_serif_7.ttf", 
 		"font/luximb.tff"};
 	
-//	public static final String FONT = "Square Sans Serif 7";
-	public static final String FONT = "Luxi Mono";
+	public static final String FONT = "Square Sans Serif 7";
+//	public static final String FONT = "Luxi Mono";
 	
 	public FontCreator(){
 		addFonts();

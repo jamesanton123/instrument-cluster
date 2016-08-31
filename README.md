@@ -30,7 +30,8 @@ All that the arduino is used for in this project is pushing signals to the raspb
 Note: To get this to work with the raspberry pi, I had to use a 3v to 5v logic level converter on the rx tx pins.
 (Note: Buying this from china took almost 4 weeks to arrive, but the quality was good, so im happy!)
 
-OLD: There is a folder called 'old' containing some old pattern of communicating between arduino and raspberry pi. 
+There is one dependency that maven doesn't download. The name of the dependency is 
+RXTXcomm.jar, and it can be extracted from this zip rxtx-2.1-7-bins-r2.zip, which can be downloaded from http://rxtx.qbang.org/wiki/index.php/Download. You will need to add that jar file to your libraries in your build path in order for the code to compile. You will also want to install the appropriate rxtx drivers onto the machine if you want it to actually communicate with a serial device. Those drivers are also included in the zip file.
 
 Layout1: A very cool ui (using fun geo and trigonometric functions, that works awesome on fast computers, but sucks pretty bad on the raspberry pi, so I re-wrote it.
 

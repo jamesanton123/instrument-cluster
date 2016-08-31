@@ -75,6 +75,11 @@ public class InstrumentClusterUpdater implements Runnable {
 			if(speed >= 30){
 				MphDigitalTextL2.getInstance().setValue(speed);
 				SpeedometerNeedle.getInstance().setValue(speed);
+			}else{
+				// Else, my rectifier circuit is not very accurate at low speeds for
+				// whatever reason.
+				MphDigitalTextL2.getInstance().setValue(0);
+				SpeedometerNeedle.getInstance().setValue(0);
 			}
 		}
 	}
